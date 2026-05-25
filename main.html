@@ -1,0 +1,305 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Guide</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Настройка VPN</h1>
+    <p class="subtitle">Выберите свою операционную систему</p>
+
+    <div class="buttons">
+
+        <button class="os-card android" onclick="showGuide('android-guide')">
+            <div class="icon">🤖</div>
+            <h2>Android</h2>
+        </button>
+
+        <button class="os-card ios" onclick="showGuide('ios-guide')">
+            <div class="icon">🍎</div>
+            <h2>iOS</h2>
+        </button>
+
+        <button class="os-card windows" onclick="showGuide('windows-guide')">
+            <div class="icon">🪟</div>
+            <h2>Windows</h2>
+        </button>
+
+        <button class="os-card macos" onclick="showGuide('macos-guide')">
+            <div class="icon">💻</div>
+            <h2>Mac OS</h2>
+        </button>
+
+    </div>
+
+    <!-- Гайды -->
+
+<div id="android-guide" class="guide-section">
+
+    <h2>🤖 Android</h2>
+
+    <div class="guide-step">
+        <h3>Шаг 1. Скачайте приложение v2rayNG</h3>
+
+        <p>
+            Скачайте приложение 
+            <a href="https://github.com/2dust/v2rayNG/releases/download/2.1.8/v2rayNG_2.1.8_universal.apk" target="_blank">
+                v2rayNG
+            </a>
+        </p>
+
+        <!-- Картинка -->
+        <!-- <img src="images/android-step1.png" alt="Скачивание приложения"> -->
+    </div>
+
+
+    <div class="guide-step">
+        <h3>Шаг 2. Установите приложение</h3>
+
+        <p>
+            Откройте скачанный APK-файл и нажмите кнопку <b>«Установить»</b>.
+        </p>
+
+        <p>
+            На некоторых устройствах Android может потребоваться разрешить
+            установку приложений из неизвестных источников.
+        </p>
+    </div>
+
+
+    <div class="guide-step">
+        <h3>Шаг 3. Скопируйте свою ссылку</h3>
+
+        <p>
+            Скопируйте ссылку, которую вам прислали в сообщении.
+        </p>
+
+        <p>
+            Обычно она выглядит примерно так:
+        </p>
+
+        <div class="code-block">
+            https://example.com/sub/xxxxxxxxxxxx
+        </div>
+
+        <p>
+            Вместо звёздочек или символов у каждого пользователя будет своя уникальная ссылка.
+        </p>
+    </div>
+
+
+    <div class="guide-step">
+        <h3>Шаг 4. Импортируйте ссылку в приложение</h3>
+
+        <p>
+            После установки откройте приложение <b>v2rayNG</b>.
+        </p>
+
+        <p>
+            В верхней части экрана нажмите на значок <b>«+»</b> и выберите пункт:
+        </p>
+
+        <div class="code-block">
+            Импорт из буфера обмена
+        </div>
+
+        <p>
+            Приложение автоматически распознает и импортирует вашу ссылку.
+        </p>
+
+        <img src="images/android-step4.png" alt="Импорт ссылки">
+    </div>
+
+
+    <div class="guide-step">
+        <h3>Шаг 5. Удалите лишнюю группу Default</h3>
+
+        <p>
+            После импорта в верхней части экрана появится жёлтая полоска загрузки,
+            а затем в списке появятся две группы:
+        </p>
+
+        <ul>
+            <li>Default</li>
+            <li>import sub</li>
+        </ul>
+
+        <p>
+            Чтобы в будущем лишняя группа не мешала, рекомендуется удалить <b>Default</b>.
+        </p>
+
+        <p>
+            Для этого:
+        </p>
+
+        <ol>
+            <li>Нажмите кнопку с тремя полосками в левом верхнем углу</li>
+            <li>Откройте раздел <b>«Группы»</b></li>
+            <li>Найдите группу <b>Default</b></li>
+            <li>Нажмите на значок корзины справа</li>
+        </ol>
+
+        <p>
+            После этого вернитесь назад с помощью стрелки в верхнем левом углу.
+        </p>
+
+        <!-- <img src="images/android-step5.png" alt="Удаление группы Default"> -->
+    </div>
+
+
+    <div class="guide-step">
+        <h3>Шаг 6. Настройте обход приложений</h3>
+
+        <p>
+            Чтобы снизить вероятность блокировки VPN, рекомендуется ограничить
+            использование VPN для всех российских приложений и сервисов.
+        </p>
+
+        <p>
+            Для этого:
+        </p>
+
+        <ol>
+            <li>Откройте меню с тремя полосками</li>
+            <li>Выберите пункт <b>«Выбор приложений»</b></li>
+            <li>Включите переключатели:
+                <ul>
+                    <li>«Использовать выбор приложений»</li>
+                    <li>«Режим обхода»</li>
+                </ul>
+            </li>
+        </ol>
+
+        <p>
+            После загрузки списка приложений рекомендуется отметить:
+        </p>
+
+        <ul>
+            <li>банковские приложения</li>
+            <li>приложения мобильных операторов</li>
+            <li>Госуслуги</li>
+            <li>WB / Ozon</li>
+            <li>Все приложения Яндекса и другие крупные российские сервисы</li>
+            <li>И т.д и т.п</li>
+        </ul>
+
+        <p>
+            Также рекомендуется отключать VPN перед посещением некоторых российских сайтов,
+            если они работают нестабильно при активном VPN-соединении.
+        </p>
+
+        <!-- <img src="images/android-step6.png" alt="Настройка обхода приложений"> -->
+    </div>
+
+
+    <div class="guide-step">
+        <h3>Шаг 7. Подключение к VPN</h3>
+
+        <p>
+            Вернитесь на главный экран приложения.
+        </p>
+
+        <p>
+            Для запуска VPN нажмите кнопку <b>Play</b> в правом нижнем углу.
+        </p>
+
+        <p>
+            После запуска должны появиться сообщения:
+        </p>
+
+        <div class="code-block">
+            Запуск служб
+        </div>
+
+        <p>и затем:</p>
+
+        <div class="code-block success">
+            Start Services Success
+        </div>
+
+        <p>
+            После подключения нажмите:
+        </p>
+
+        <div class="code-block">
+            Соединено, нажмите для проверки
+        </div>
+
+        <p>
+            Если всё работает корректно, появится сообщение примерно такого вида:
+        </p>
+
+        <div class="code-block">
+            Успешно: соединение заняло *** мс
+            <br>
+            (**) ***.***.***.***
+        </div>
+
+        <!-- <img src="images/android-step7.png" alt="Подключение VPN"> -->
+    </div>
+
+
+    <div class="guide-step">
+        <h3>Как отключить VPN</h3>
+
+        <p>
+            Чтобы отключить VPN:
+        </p>
+
+        <ul>
+            <li>нажмите оранжевую кнопку с квадратом в правом нижнем углу</li>
+            <li>или откройте шторку уведомлений и нажмите:
+                <ul>
+                    <li>«Остановить»</li>
+                    <li>или «Перезапуск службы»</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- <img src="images/android-step8.png" alt="Отключение VPN"> -->
+    </div>
+
+</div>
+
+    <div id="ios-guide" class="guide-section">
+        <h2>iOS</h2>
+        <p>Тут будет ваш гайд для iOS.</p>
+    </div>
+
+    <div id="windows-guide" class="guide-section">
+        <h2>Windows</h2>
+        <p>Тут будет ваш гайд для Windows.</p>
+    </div>
+
+    <div id="macos-guide" class="guide-section">
+        <h2>Mac OS</h2>
+        <p>Тут будет ваш гайд для Mac OS.</p>
+    </div>
+
+</div>
+
+<script>
+    function showGuide(id) {
+
+        const guides = document.querySelectorAll('.guide-section');
+
+        guides.forEach(guide => {
+            guide.style.display = 'none';
+        });
+
+        document.getElementById(id).style.display = 'block';
+
+        document.getElementById(id).scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.os-card {
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 40px 20px;
+    color: white;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.os-card:hover {
+    transform: translateY(-5px);
+    background: #334155;
+}
+
+.icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.os-card h2 {
+    font-size: 28px;
+}
+
+/* Hover цвета */
+
+.android:hover {
+    border-color: #3ddc84;
+}
+
+.ios:hover {
+    border-color: #a2aaad;
+}
+
+.windows:hover {
+    border-color: #00a4ef;
+}
+
+.macos:hover {
+    border-color: #c084fc;
+}
+
+/* Гайды */
+
+.guide-section {
+    display: none;
+    margin-top: 25px;
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: left;
+    animation: fade 0.3s ease;
+}
+
+.guide-section h2 {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.guide-section p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===== ОФОРМЛЕНИЕ ГАЙДА ===== */
+
+.guide-step {
+    background: #273449;
+    padding: 30px;
+    border-radius: 18px;
+    margin-top: 25px;
+    border: 1px solid #3b4c68;
+}
+
+.guide-step h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.guide-step p {
+    color: #d5deed;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.guide-step ul,
+.guide-step ol {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.guide-step li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: #d5deed;
+}
+
+/* ===== ССЫЛКИ ===== */
+
+.guide-step a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.guide-step a:hover {
+    text-decoration: underline;
+}
+
+/* ===== БЛОКИ КОДА ===== */
+
+.code-block {
+    background: #111827;
+    border: 1px solid #374151;
+    border-left: 4px solid #58a6ff;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+    color: #e2e8f0;
+    font-family: monospace;
+    overflow-x: auto;
+    line-height: 1.6;
+}
+
+.code-block.success {
+    border-left-color: #22c55e;
+}
+
+/* ===== КАРТИНКИ ===== */
+
+.guide-step img {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    border-radius: 16px;
+    border: 1px solid #3b4c68;
+}
+
+/* ===== ЗАГОЛОВОК СЕКЦИИ ===== */
+
+.guide-section h2 {
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+
+/* ===== АДАПТАЦИЯ ПОД ТЕЛЕФОН ===== */
+
+@media (max-width: 768px) {
+
+    .guide-section {
+        padding: 20px;
+    }
+
+    .guide-step {
+        padding: 20px;
+    }
+
+    .guide-section h2 {
+        font-size: 32px;
+    }
+
+    .guide-step h3 {
+        font-size: 22px;
+    }
+
+    .guide-step p,
+    .guide-step li {
+        font-size: 15px;
+    }
+}
