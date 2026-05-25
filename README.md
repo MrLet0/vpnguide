@@ -1,3 +1,3 @@
 # VPNGuide
 Этот гайд предназначен только для VPN на базе Hysteria2. Гайд для всех людей с картинками и текстом. Поймет даже ребенок. Гайд в формате сайта
-[Сайт](https://mrlet0.github.io/sillysite/main.html)
+[Сайт]([https://mrlet0.github.io/sillysite/main.html](https://mrlet0.github.io/vpnguide/main.html))
